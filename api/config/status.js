@@ -22,6 +22,9 @@ function errorApp(status){
     if(status=='usernotfound') return {'message':'Cant write DB last login','code':50}
     if(status=='scorecantadd') return {'message':'Cant add Score','code':51}
 
+
+    if(status=='wordnotfound') return {'message':'Not found','code':52}
+
     //user
     if(status=='userunvalidate') return {'message':'Cant write DB last login','code':22}
 

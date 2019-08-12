@@ -176,6 +176,12 @@ async function getWord(req,res){
         }
      
      const checkDbWord = await req.crudder.findOne(dataLevel)
+     if(!checkDbWord){
+        const statusErrNotFound= statusErrCode('wordnotfound')
+        return response.bad_app(statusErrNotFound.message,statusErrNotFound.code,res)
+       
+
+     } 
      randomWord(checkDbWord.word,res)
  
  
